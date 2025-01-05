@@ -10,13 +10,6 @@ footer {
     width: 100%;
     margin: 0; 
     padding: 20px 0;
-    /*background-color: black;
-    color: white;
-    height: 209px;
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;
-    align-items: center;*/
 }
 
 .footer_logo {
@@ -28,5 +21,10 @@ footer {
 footer p {
     font-size: 24px;
     color: white;
+}
 
+@media (max-width: 376px) {
+    footer p {
+        font-size: 12px;
+    }
 }

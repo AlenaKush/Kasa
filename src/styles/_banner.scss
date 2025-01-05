@@ -10,7 +10,8 @@
   font-size: 30px;
   border-radius: 25px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  margin: 50px auto;
+  margin: 40px auto;
+  padding: 20px;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
@@ -35,7 +36,7 @@
 @media (max-width: 376px) {
   .banner {
     height: 111px;
-    margin: 20px;
+    margin: 20px auto;
 
     h1 {
       font-size: 24px;

@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 function Layout({ children }) {
   return (
     <div>
-      <Header />
-      <main>{children}</main>
+      <div className='page_container'>
+        <Header />
+        <main>{children}</main>
+      </div>
       <Footer />
     </div>
   );

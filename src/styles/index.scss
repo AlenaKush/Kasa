@@ -3,11 +3,13 @@
 @import 'banner';
 @import 'card';
 
-.home {
+
+.page_container {
   width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 40px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .cards-list {
@@ -16,7 +18,6 @@
   max-width: 1220px;
   gap: 20px;
   width: 100%;
-  margin: 50px auto;
   justify-content: center;
   background-color: #F6F6F6;
   border-radius: 25px;
@@ -35,36 +36,17 @@
 body {
   margin: 0;
 }
-@media (max-width: 374px) {
-  /*
+@media (max-width: 376px) {
+  
+  .page_container {
+    padding: 20px;
+  }
+
   .cards-list {
-      grid-template-columns: 1fr;  // Одна колонка карточек
-      gap: 20px;  // Уменьшаем отступы между карточками
-      padding: 0;  // Уменьшаем внутренние отступы
-      border-radius: 10px;  // Скругляем углы сильнее
+    grid-template-columns: 1fr; 
+    gap: 20px;  
+    padding: 0;  
+    border-radius: 10px;
+    background-color: white;  
   }
-
-  .header_nav a {
-      font-size: 12px;  // Уменьшаем размер шрифта для навигации
-      margin-left: 25px;
-  }
-
-  .header_logo {
-      width: 145px;  // Уменьшаем размер логотипа
-      height: auto;
-  }
-
-  .banner {
-      height: 111px;  // Уменьшаем высоту баннера
-      font-size: 20px;  // Уменьшаем размер текста в баннере
-  }
-
-  footer {
-      padding: 15px;  // Уменьшаем отступы в футере
-      text-align: center;
-  }
-
-  footer p {
-      font-size: 12px;  // Мелкий текст в футере
-  }*/
 }
