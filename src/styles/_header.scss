@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1220px;
+    margin: 40px; 
+    box-sizing: border-box;
+}
+
+.header_nav a {
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    margin-left: 40px;
+    text-decoration: none; 
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+    
+} 
+   
+@media (max-width: 376px) {
+    
+    header {
+        margin: 20px;
+        max-width: 335px;
+
+    }
+
+    .header_logo {
+        width: 145px;
+    }
+
+    .header_nav a {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+}

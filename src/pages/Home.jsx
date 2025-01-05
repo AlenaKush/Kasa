@@ -1,9 +1,12 @@
-import '../styles/app.scss';
+import Banner from '../components/Banner';
+import BannerHome from '../assets/BannerHome.png';
+import CardList from '../components/CardList';
 
 function Home() {
   return (
     <div className="home">
-      <h1>Chez vous, partout et ailleurs</h1>
+      <Banner image={BannerHome} text="Chez vous, partout et ailleurs" />
+      <CardList />
     </div>
   );
 };
