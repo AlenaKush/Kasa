@@ -4,7 +4,7 @@ import CardList from '../components/CardList';
 
 function Home() {
   return (
-    <div className="home">
+    <div>
       <Banner image={BannerHome} text="Chez vous, partout et ailleurs" />
       <CardList />
     </div>

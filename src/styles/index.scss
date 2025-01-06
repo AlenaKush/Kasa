@@ -2,7 +2,24 @@
 @import 'footer';
 @import 'banner';
 @import 'card';
+@import 'collapse';
+@import 'notfound';
 
+:root {
+  font-family: Montserrat, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px;
+}
 
 .page_container {
   width: 100%;
@@ -26,16 +43,6 @@
 }
 
 
-:root {
-  font-family: Montserrat, sans-serif;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  margin: 0;
-}
 @media (max-width: 376px) {
   
   .page_container {
