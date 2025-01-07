@@ -1,0 +1,24 @@
+.logement-detail {
+    &_name {
+        font-size: 36px;
+        font-weight: 500;
+        color: #FF6060;
+    }
+    &_collapse {
+        display: flex;
+        justify-content: space-between;
+
+        collapse {
+            max-width: 582px;
+        }
+    }
+}
+
+
+@media (max-width: 376px) {
+    .logement-detail {
+        &_name {
+            font-size: 18px;
+        }
+    }
+}

@@ -18,15 +18,26 @@ function Carousel({ pictures }) {
     return (
         <div className="carousel">
             <div
-                className="carousel-image"
+                className="carousel_image"
                 style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
             ></div>
-            <button className="carousel-button prev" onClick={handlePrev}>
-                <span className="material-symbols-outlined">chevron_left</span>
-            </button>
-            <button className="carousel-button next" onClick={handleNext}>
-                <span className="material-symbols-outlined">chevron_right</span>
-            </button>
+
+            {/* Стрелки отображаются, если более одной картинки */}
+            {pictures.length > 1 && (
+                <>
+                    <button className="carousel_button prev" onClick={handlePrev}>
+                        <span className="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button className="carousel_button next" onClick={handleNext}>
+                        <span className="material-symbols-outlined">chevron_right</span>
+                    </button>
+
+                    {/* Нумерация текущего изображения */}
+                    <div className="carousel_counter">
+                        {currentIndex + 1} / {pictures.length}
+                    </div>
+                </>
+            )}
         </div>
     );
 }
