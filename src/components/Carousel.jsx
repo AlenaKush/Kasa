@@ -22,7 +22,6 @@ function Carousel({ pictures }) {
                 style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
             ></div>
 
-            {/* Стрелки отображаются, если более одной картинки */}
             {pictures.length > 1 && (
                 <>
                     <button className="carousel_button prev" onClick={handlePrev}>
@@ -32,7 +31,6 @@ function Carousel({ pictures }) {
                         <span className="material-symbols-outlined">chevron_right</span>
                     </button>
 
-                    {/* Нумерация текущего изображения */}
                     <div className="carousel_counter">
                         {currentIndex + 1} / {pictures.length}
                     </div>

@@ -4,6 +4,7 @@ import logements from '../data/logements.json';
 import Carousel from '../components/Carousel';
 import Collapse from "../components/Collapse";
 import Tags from '../components/Tags';
+import Rating from '../components/Rating';
 
 
 function LogementDetail() {
@@ -25,26 +26,28 @@ function LogementDetail() {
     return (
         <div>
             <Carousel pictures={logement.pictures} />
-            <div className='logement-detail'>
-                <div>
-                    <h1 className='logement-detail_name'>{logement.title}</h1>
-                    <p className='logement-detail_location'>{logement.location}</p>
-                    <Tags tags={logement.tags} />
+            <div>
+                <div className='logement'>
+                    <div className='logement_container'>
+                        <h1 className='logement_name'>{logement.title}</h1>
+                        <p className='logement_location'>{logement.location}</p>
+                        <Tags tags={logement.tags} />
+                    </div>
+                    <div className='logement_container host-rate'>
+                        <div className='host'>
+                            <p className='host_name'>{logement.host.name}</p>
+                            <div className='host_photo' style={{ backgroundImage: `url(${logement.host.picture})` }}></div>
+                        </div>
+                        <Rating rating={logement.rating}/>
+                    </div>
+                </div>
+                <div className='logement_collapse'>
                     <Collapse title="Description">
                         <p>{logement.description}</p>
                     </Collapse>
-                </div>
-                <div>
-                    <div>
-                        <p className='logement-detail_host-name'>{logement.host.name}</p>
-                        <div className='logement-detail_host-photo' style={{ backgroundImage: `url(${logement.host.picture})` }}>Photo</div>
-                    </div>
-                    <div>
-                        <p>here will be the rate</p>
-                        <Collapse title="Équipements">
-                            <p>{logement.equipments}</p>
-                        </Collapse>
-                    </div>
+                    <Collapse title="Équipements">
+                        <p>{logement.equipments}</p>
+                    </Collapse>
                 </div>
             </div>
         </div>
