@@ -35,7 +35,10 @@ function LogementDetail() {
                     </div>
                     <div className='logement_container host-rate'>
                         <div className='host'>
-                            <p className='host_name'>{logement.host.name}</p>
+                            <div className='host_name'>
+                                <span>{logement.host.name.split(' ')[0]}</span>
+                                <span>{logement.host.name.split(' ')[1]}</span>
+                            </div>
                             <div className='host_photo' style={{ backgroundImage: `url(${logement.host.picture})` }}></div>
                         </div>
                         <Rating rating={logement.rating}/>
@@ -46,7 +49,11 @@ function LogementDetail() {
                         <p>{logement.description}</p>
                     </Collapse>
                     <Collapse title="Équipements">
-                        <p>{logement.equipments}</p>
+                        {logement.equipments.map( (equipment, index) => {
+                            return (
+                                <p key={index}>{equipment}</p>
+                            )
+                        })}
                     </Collapse>
                 </div>
             </div>

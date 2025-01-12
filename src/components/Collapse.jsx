@@ -15,9 +15,11 @@ function Collapse({ title, children }) {
                     {isOpen ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}
                 </span>
             </div>
-            <div className={`collapse_content ${isOpen ? 'open' : 'closed'}`}>
-                {children}
-            </div>
+            {isOpen ? 
+                (<div className="collapse_content open">
+                    {children}
+                </div>) : null
+            }
         </div>
     );
 }

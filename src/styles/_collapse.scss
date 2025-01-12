@@ -11,34 +11,33 @@
 
 .collapse {
     width: 100%;
-    background-color: #FF6060;
-    border-radius: 5px;
     margin-bottom: 10px;
+    
 
     &_header {
         color: white;
         display: flex;
         justify-content: space-between;
-        
+        background-color: #FF6060;
+        border-radius: 5px;
     }
 
     &_content {
         font-size: 18px;
         font-weight: 400;
-        background-color: #F6F6F6;
         padding: 0 10px;
-        border-bottom-left-radius: 5px;  
-        border-bottom-right-radius: 5px; 
+        border-radius: 5px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
   
         &.open {
-            max-height: 100%;  
+            max-height: 100%; 
+            background-color: #F6F6F6; 
         }
     }
 }
-@media (max-width: 376px) {
+@media (max-width: 426px) {
     .collapse {
         &_header h2 {
             font-size: 13px;
